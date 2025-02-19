@@ -1,7 +1,7 @@
 name: Build frontend
 on: [push, workflow_dispatch]
 jobs:
-    Fetch code:
+    Fetch_code:
         runs-on: ubuntu-latest
         steps:
             - name: clone repo
@@ -10,8 +10,8 @@ jobs:
               run: npm ci
             - name: Run tests
               run: npm test
-    Compile Code:
-        needs: Fetch code
+    Compile_Code:
+        needs: Fetch_code
         runs-on: ubuntu-latest
         steps:
             - name: Fetch code
